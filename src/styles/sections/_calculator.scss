@@ -1,0 +1,63 @@
+@import "../variables/colors";
+
+.calculator {
+  .container {
+    display: grid;
+    align-content: center;
+  }
+
+  &__title {
+    color: $orange;
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  &__form {
+    max-width: 500px;
+    margin: 0 auto;
+
+    label {
+      display: block;
+      color: $fine-blue;
+      margin-bottom: 10px;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+      background-color: $gray;
+      margin-bottom: 40px;
+
+      transition: background 0.3s ease;
+      &:focus,
+      &:hover {
+        background-color: #fff;
+      }
+    }
+
+    &__button {
+      background-color: $green;
+      color: #fff;
+
+      transition: color 0.3s ease;
+      &:hover {
+        color: lighten($green, 20%);
+      }
+    }
+  }
+
+  &__output {
+    color: $red;
+    padding: 40px 0;
+
+    &__count {
+      text-align: center;
+      font-weight: bold;
+      font-size: 34px;
+    }
+  }
+}

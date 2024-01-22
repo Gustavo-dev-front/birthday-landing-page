@@ -5,10 +5,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Birthday Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./src/styles/main.scss">
 </head>
 
 <body>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero__content">
+        <h1 class="hero__title title">BIRTHDAY CALCULATOR</h1>
+        <p class="hero__text">Descubra agora quanto tempo falta para o seu aniversário, no formato contagem regressiva.
+        </p>
+        <a class="hero__button ui-button" href="#calculator">Vamos lá!</a>
+      </div>
+      <img src="./src/imgs/hero.svg" alt="peoples in birthday party" class="hero__img">
+    </div>
+  </section>
+
+  <section class="calculator" id="calculator">
+    <div class="container">
+      <h2 class="calculator__title title">Contagem regressiva</h2>
+      <form class="calculator__form">
+        <label for="date">Informe sua data de nascimento para que a mágica aconteça.</label>
+        <input type="date" placeholder="01/01/1999" id="date">
+        <button type="submit" class="calculator__form__button ui-button">Calcular</button>
+      </form>
+      <div class="calculator__output">
+        <p class="calculator__output__count">0d 00h 00m 00s</p>
+      </div>
+    </div>
+  </section>
 
   <script defer src="./src/scripts/main.js"></script>
 </body>

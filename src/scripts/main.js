@@ -27,6 +27,8 @@ const start = (e) => {
   last_interval = setInterval(() => {
     const {dias, horas, minutos, segundos} = calcular(born);
 
+
+    OUTPUT.classList.add("calculator__output__count--is-visible");
     OUTPUT.innerText = `${dias}d ${horas}h ${minutos}m ${segundos}s`;
   }, 1000);
 }

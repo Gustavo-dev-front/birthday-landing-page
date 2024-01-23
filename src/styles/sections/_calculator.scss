@@ -53,11 +53,21 @@
   &__output {
     color: $red;
     padding: 40px 0;
-
+    
     &__count {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(-100px);
       text-align: center;
       font-weight: bold;
       font-size: 34px;
+
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      &--is-visible {
+        opacity: 1;
+        transform: initial;
+        pointer-events: auto;
+      }
     }
   }
 }
